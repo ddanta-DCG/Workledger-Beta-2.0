@@ -9,3 +9,4 @@ out
 .DS_Store
 .env*
 npm-debug.log*
+tsconfig.tsbuildinfo
