@@ -52,6 +52,7 @@ export const CardContent: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 // ============================================================================
 type StepKey = "welcome" | "type" | "basics" | "w9" | "bank" | "review" | "done";
 type BankStatus = "not_started" | "pending" | "verified";
+type VendorType = "individual" | "business" | null;
 interface Step { key: StepKey; label: string }
 
 // ============================================================================
@@ -307,7 +308,7 @@ const MaskedTaxIdInput: React.FC<{
 export function canContinueForStep(
   key: StepKey,
   state: {
-    type: "individual" | "business";
+    type: VendorType;
     name: string;
     business: string;
     email: string;
