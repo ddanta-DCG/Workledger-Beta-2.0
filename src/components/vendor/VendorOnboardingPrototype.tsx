@@ -14,7 +14,7 @@ import {
   TimerReset,
   Mail,
 } from "lucide-react";
-
+import { vendorOnboardingStyles } from "./vendorOnboardingStyles";
 // ============================================================================
 // SELF-CONTAINED UI PRIMITIVES (so preview/build works without external files)
 // ============================================================================
@@ -430,8 +430,13 @@ export default function VendorOnboardingPrototype() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <header className="mx-auto max-w-3xl px-5 pt-6 md:pt-10 flex items-center justify-between">
+    <>
+    <style
+        data-vendor-onboarding
+        dangerouslySetInnerHTML={{ __html: vendorOnboardingStyles }}
+      />
+      <div className="min-h-screen bg-gray-100 text-gray-900">
+        <header className="mx-auto max-w-3xl px-5 pt-6 md:pt-10 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img
             src={LOGO_SRC}
@@ -723,6 +728,7 @@ export default function VendorOnboardingPrototype() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
