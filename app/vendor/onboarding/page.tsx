@@ -2,7 +2,7 @@ import VendorOnboardingPrototype from "@/components/vendor/VendorOnboardingProto
 
 export default function Page() {
   return (
-    <main className="bg-slate-50 py-8">
+    <main className="py-8">
       <VendorOnboardingPrototype />
     </main>
   );
